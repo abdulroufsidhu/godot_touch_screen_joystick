@@ -5,9 +5,10 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="TouchScreenJoystick" type="Node2D" parent="."]
-position = Vector2(92, 61)
+position = Vector2(133, 137)
 script = ExtResource("1_i2148")
-size = 55.62
+base_color = Color(1, 0.933333, 0, 1)
+size = 100.0
 
 [node name="TouchScreenJoystick2" type="Node2D" parent="."]
 position = Vector2(475, 61)

@@ -1,4 +1,6 @@
 @tool
+@icon("res://addons/touch_joystick/joystick.png")
+
 extends Node2D
 
 signal direction

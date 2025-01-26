@@ -1,9 +1,15 @@
 [gd_scene load_steps=2 format=3 uid="uid://so50ma31wjug"]
 
-[ext_resource type="PackedScene" uid="uid://b8p7iphfhpk0j" path="res://addons/touch_joystick/joystick.tscn" id="1_fwwh1"]
+[ext_resource type="Script" path="res://addons/touch_joystick/joystick.gd" id="1_i2148"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Joystick" parent="." instance=ExtResource("1_fwwh1")]
-position = Vector2(118, 112)
-size = 71.665
+[node name="TouchScreenJoystick" type="Node2D" parent="."]
+position = Vector2(92, 61)
+script = ExtResource("1_i2148")
+size = 55.62
+
+[node name="TouchScreenJoystick2" type="Node2D" parent="."]
+position = Vector2(475, 61)
+script = ExtResource("1_i2148")
+size = 57.675

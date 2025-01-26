@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://so50ma31wjug"]
+
+[ext_resource type="PackedScene" uid="uid://b8p7iphfhpk0j" path="res://addons/touch_joystick/joystick.tscn" id="1_fwwh1"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Joystick" parent="." instance=ExtResource("1_fwwh1")]
+position = Vector2(118, 112)
+size = 71.665

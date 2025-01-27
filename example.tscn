@@ -1,16 +1,67 @@
-[gd_scene load_steps=2 format=3 uid="uid://so50ma31wjug"]
+[gd_scene load_steps=5 format=3 uid="uid://so50ma31wjug"]
 
+[ext_resource type="Script" path="res://example.gd" id="1_1w50k"]
 [ext_resource type="Script" path="res://addons/touch_joystick/joystick.gd" id="1_i2148"]
+[ext_resource type="Texture2D" uid="uid://knfrd4jof6wv" path="res://icon.svg" id="2_h8djk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fuisn"]
+size = Vector2(126, 128)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_1w50k")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(562, 296)
+
+[node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("2_h8djk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_fuisn")
 
 [node name="TouchScreenJoystick" type="Node2D" parent="."]
-position = Vector2(133, 137)
+position = Vector2(174, 487)
 script = ExtResource("1_i2148")
-base_color = Color(1, 0.933333, 0, 1)
-size = 100.0
+base_color = Color(0.432091, 0.637057, 0.31864, 1)
+size = 156.285
+knob_ratio = 2.0
+left = &"ui_left"
+right = &"ui_right"
+up = &"ui_up"
+down = &"ui_down"
 
 [node name="TouchScreenJoystick2" type="Node2D" parent="."]
-position = Vector2(475, 61)
+position = Vector2(997, 482)
 script = ExtResource("1_i2148")
-size = 57.675
+base_color = Color(0.677215, 0.670293, 0.664365, 1)
+size = 137.19
+knob_ratio = 2.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(8, 0, 1152, 0, 1152, 648, 0, 648, 8, 24, -32, -16, -40, 696, 1192, 696, 1192, -40, -16, -40)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 84.0
+offset_top = 294.0
+offset_right = 274.0
+offset_bottom = 339.0
+theme_override_font_sizes/font_size = 32
+text = "Input Action"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 862.0
+offset_top = 278.0
+offset_right = 1134.0
+offset_bottom = 323.0
+theme_override_font_sizes/font_size = 32
+text = "Signal Connection"
+
+[connection signal="direction" from="TouchScreenJoystick2" to="." method="_on_touch_screen_joystick_direction"]

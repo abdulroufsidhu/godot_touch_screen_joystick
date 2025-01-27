@@ -22,6 +22,10 @@ enabled=PackedStringArray("res://addons/touch_joystick/plugin.cfg")
 
 pointing/emulate_touch_from_mouse=true
 
+[physics]
+
+3d/default_gravity=0.0
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

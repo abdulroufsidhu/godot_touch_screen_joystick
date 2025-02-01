@@ -22,7 +22,7 @@ shape = SubResource("RectangleShape2D_fuisn")
 [node name="TouchScreenJoystick" type="Node2D" parent="."]
 position = Vector2(174, 487)
 script = ExtResource("1_i2148")
-size = 156.285
+size = 128.0
 knob_ratio = 2.0
 left = &"ui_left"
 right = &"ui_right"
@@ -30,11 +30,11 @@ up = &"ui_up"
 down = &"ui_down"
 
 [node name="TouchScreenJoystick2" type="Node2D" parent="."]
-position = Vector2(997, 482)
+position = Vector2(1000, 488)
 script = ExtResource("1_i2148")
 base_color = Color(1, 1, 1, 1)
-size = 137.19
-knob_ratio = 2.0
+size = 128.0
+knob_ratio = 6.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -47,7 +47,17 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Label" type="Label" parent="."]
+[node name="Label2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 862.0
+offset_top = 278.0
+offset_right = 1139.0
+offset_bottom = 323.0
+theme_override_font_sizes/font_size = 32
+text = "Signal Connection"
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
 offset_left = 84.0
 offset_top = 294.0
 offset_right = 274.0
@@ -55,18 +65,11 @@ offset_bottom = 339.0
 theme_override_font_sizes/font_size = 32
 text = "Input Action"
 
-[node name="Label2" type="Label" parent="."]
-offset_left = 862.0
-offset_top = 278.0
-offset_right = 1134.0
-offset_bottom = 323.0
-theme_override_font_sizes/font_size = 32
-text = "Signal Connection"
-
 [node name="TouchScreenJoystick3" type="Node2D" parent="."]
 position = Vector2(589, 503)
 script = ExtResource("1_i2148")
 base_color = Color(0.312953, 0.417229, 1, 1)
-size = 128.0
+size = 96.0
+knob_ratio = 2.0
 
 [connection signal="direction" from="TouchScreenJoystick2" to="." method="_on_touch_screen_joystick_direction"]

@@ -109,7 +109,7 @@ Add the example to your project to quickly see the joystick in action.
 
 ## 🪪 License
 
-This project is licensed under the **GPL-2.0 License**.  
+This project is licensed under the **MIT License**.  
 You’re free to use, modify, and redistribute it under the same terms.
 
 ---
